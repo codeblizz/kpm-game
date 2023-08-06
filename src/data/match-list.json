@@ -1,0 +1,94 @@
+{
+  "matches": [
+    {
+      "league": "Premier League",
+      "teams": ["Manchester United", "Manchester City"],
+      "odds": {
+        "home_team": 2.5,
+        "away_team": 1.75,
+        "draw": 3.2
+      }
+    },
+    {
+      "league": "La Liga",
+      "teams": ["Real Madrid", "Barcelona"],
+      "odds": {
+        "home_team": 2.2,
+        "away_team": 2.0,
+        "draw": 2.9
+      }
+    },
+    {
+      "league": "Serie A",
+      "teams": ["Juventus", "AC Milan"],
+      "odds": {
+        "home_team": 1.9,
+        "away_team": 2.3,
+        "draw": 3.1
+      }
+    },
+    {
+      "league": "Bundesliga",
+      "teams": ["Bayern Munich", "Borussia Dortmund"],
+      "odds": {
+        "home_team": 1.7,
+        "away_team": 2.5,
+        "draw": 3.5
+      }
+    },
+    {
+      "league": "Ligue 1",
+      "teams": ["Paris Saint-Germain", "Olympique Marseille"],
+      "odds": {
+        "home_team": 1.8,
+        "away_team": 2.1,
+        "draw": 3.0
+      }
+    },
+    {
+      "league": "Eredivisie",
+      "teams": ["Ajax", "PSV Eindhoven"],
+      "odds": {
+        "home_team": 1.6,
+        "away_team": 2.7,
+        "draw": 3.8
+      }
+    },
+    {
+      "league": "Primeira Liga",
+      "teams": ["Porto", "Benfica"],
+      "odds": {
+        "home_team": 2.1,
+        "away_team": 1.9,
+        "draw": 3.3
+      }
+    },
+    {
+      "league": "Scottish Premiership",
+      "teams": ["Celtic", "Rangers"],
+      "odds": {
+        "home_team": 1.95,
+        "away_team": 2.2,
+        "draw": 3.2
+      }
+    },
+    {
+      "league": "MLS",
+      "teams": ["LA Galaxy", "New York City FC"],
+      "odds": {
+        "home_team": 2.4,
+        "away_team": 1.8,
+        "draw": 3.4
+      }
+    },
+    {
+      "league": "J-League",
+      "teams": ["Kawasaki Frontale", "Urawa Red Diamonds"],
+      "odds": {
+        "home_team": 1.7,
+        "away_team": 2.5,
+        "draw": 3.7
+      }
+    }
+  ]
+}

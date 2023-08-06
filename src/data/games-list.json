@@ -1,0 +1,227 @@
+[
+  {
+    "id": 3,
+    "title": "Four Lucky Clover",
+    "identifier": "softswiss/FourLuckyClover",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/FourLuckyClover/3"
+  },
+  {
+    "id": 7,
+    "title": "West Town",
+    "identifier": "softswiss/WestTown",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/WestTown/7"
+  },
+  {
+    "id": 11,
+    "title": "Heads and Tails XY",
+    "identifier": "softswiss/HeadsandTailsXY",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/HeadsandTailsXY/11"
+  },
+  {
+    "id": 19,
+    "title": "All Lucky Clovers 20",
+    "identifier": "softswiss/AllLuckyClover20",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/AllLuckyClover20/19"
+  },
+  {
+    "id": 23,
+    "title": "Princess of Sky",
+    "identifier": "softswiss/PrincessOfSky",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/PrincessOfSky/23"
+  },
+  {
+    "id": 31,
+    "title": "Slotomon Go",
+    "identifier": "softswiss/SlotomonGo",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/SlotomonGo/31"
+  },
+  {
+    "id": 35,
+    "title": "Four Lucky Diamonds",
+    "identifier": "softswiss/FourLuckyDiamonds",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/FourLuckyDiamonds/35"
+  },
+  {
+    "id": 39,
+    "title": "European Roulette",
+    "identifier": "softswiss/EuropeanRoulette",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "roulette"],
+    "play_url": "/games/softswiss/EuropeanRoulette/39"
+  },
+  {
+    "id": 43,
+    "title": "Scratch Dice",
+    "identifier": "softswiss/ScratchDice",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/ScratchDice/43"
+  },
+  {
+    "id": 47,
+    "title": "Aztec Magic Bonanza",
+    "identifier": "softswiss/AztecMagicBonanza",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/AztecMagicBonanza/47"
+  },
+  {
+    "id": 51,
+    "title": "Book of Pyramids",
+    "identifier": "softswiss/BookOfPyramids",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/BookOfPyramids/51"
+  },
+  {
+    "id": 55,
+    "title": "Lucky Blue",
+    "identifier": "softswiss/LuckyBlue",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/LuckyBlue/55"
+  },
+  {
+    "id": 59,
+    "title": "All Lucky Clovers",
+    "identifier": "softswiss/AllLuckyClover",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/AllLuckyClover/59"
+  },
+  {
+    "id": 63,
+    "title": "Desert Treasure",
+    "identifier": "softswiss/DesertTreasure",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/DesertTreasure/63"
+  },
+  {
+    "id": 67,
+    "title": "Miss Cherry Fruits Jackpot party",
+    "identifier": "softswiss/MissCherryFruitsJackpotparty",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/MissCherryFruitsJackpotparty/67"
+  },
+  {
+    "id": 71,
+    "title": "Plinko",
+    "identifier": "softswiss/Plinko",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/Plinko/71"
+  },
+  {
+    "id": 75,
+    "title": "Deep Sea",
+    "identifier": "softswiss/DeepSea",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/DeepSea/75"
+  },
+  {
+    "id": 79,
+    "title": "Journey Flirt",
+    "identifier": "softswiss/JourneyFlirt",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/JourneyFlirt/79"
+  },
+  {
+    "id": 83,
+    "title": "Aloha King Elvis",
+    "identifier": "softswiss/AlohaKingElvis",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/AlohaKingElvis/83"
+  },
+  {
+    "id": 87,
+    "title": "Plinko XY",
+    "identifier": "softswiss/PlinkoXY",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/PlinkoXY/87"
+  },
+  {
+    "id": 91,
+    "title": "Gift Rush",
+    "identifier": "softswiss/GiftRush",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/GiftRush/91"
+  },
+  {
+    "id": 95,
+    "title": "Alien Fruits",
+    "identifier": "softswiss/AlienFruits",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/AlienFruits/95"
+  },
+  {
+    "id": 99,
+    "title": "Minesweeper",
+    "identifier": "softswiss/Minesweeper",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/Minesweeper/99"
+  },
+  {
+    "id": 103,
+    "title": "Elvis Frog in Vegas",
+    "identifier": "softswiss/ElvisFroginVegas",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "slots"],
+    "play_url": "/games/softswiss/ElvisFroginVegas/103"
+  },
+  {
+    "id": 115,
+    "title": "Minesweeper XY",
+    "identifier": "softswiss/MinesweeperXY",
+    "provider": "bgaming",
+    "devices": ["desktop", "mobile"],
+    "collections": ["all", "_hd", "casual"],
+    "play_url": "/games/softswiss/MinesweeperXY/115"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "United Arab Emirates",
+    "isoCode": "AE",
+    "shortName": "UAE",
+    "flag": "🇦🇪",
+    "phonecode": "971",
+    "currency": "AED",
+    "latitude": "24.00000000",
+    "longitude": "54.00000000"
+  },
+  {
+    "name": "United Kingdom",
+    "isoCode": "GB",
+    "shortName": "UK",
+    "flag": "🇬🇧",
+    "phonecode": "44",
+    "currency": "GBP",
+    "latitude": "54.00000000",
+    "longitude": "-2.00000000"
+  },
+  {
+    "name": "United States",
+    "isoCode": "US",
+    "shortName": "USA",
+    "flag": "🇺🇸",
+    "phonecode": "1",
+    "currency": "USD",
+    "latitude": "38.00000000",
+    "longitude": "-97.00000000"
+  }
+]
