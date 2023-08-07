@@ -9,9 +9,8 @@ export type ItemType = {
 };
 
 export type DropdownList = {
-  listItems: Country;
   className?: string;
   panelClass?: string;
+  defaultValue: ItemType;
   dropdownList: ItemType[];
-  setListItems: (value: Country) => void;
 };
