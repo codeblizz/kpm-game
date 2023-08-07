@@ -9,3 +9,9 @@ export enum Collections {
   SLOTS = 'slots',
 }
 
+export enum EnumTypes {
+  HOME = 'home',
+  LOGIN = 'login',
+  REGISTER = 'register',
+}
+
