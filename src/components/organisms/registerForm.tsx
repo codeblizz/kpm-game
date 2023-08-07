@@ -2,17 +2,20 @@ import { cn } from '@/helpers/lib';
 import { useRouter } from 'next/router';
 import Form from '@/components/atoms/form';
 import Input from '@/components/atoms/input';
+import { useSession } from 'next-auth/react';
 import Button from '@/components/atoms/button';
 import NextLink from '@/components/atoms/link';
-import React, { useRef, useState } from 'react';
+import useResetToast from '@/hooks/useResetToast';
 import Paragraph from '@/components/atoms/paragraph';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from 'react-hook-form';
 import RegisterService from '@/services/register.service';
+import React, { useEffect, useRef, useState } from 'react';
 import { RegisterSchema, IRegister } from '@/helpers/validation';
 
 const AuthForm = () => {
   const router = useRouter();
+  const { data: session, status } = useSession();
   const refHasLink = useRef<boolean>(false);
   const [loader, setLoader] = useState(false);
   const [infoMsg, setInfoMsg] = useState({ msg: '' });
@@ -49,6 +52,8 @@ const AuthForm = () => {
       setErrorMsg({ msg: result?.data.message });
     }
   };
+
+  useResetToast({ setInfoMsg, setErrorMsg });
 
   return (
     <div className='w-[37%] min-w-fit'>

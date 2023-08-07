@@ -1,12 +1,13 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { cn } from '@/helpers/lib';
 import { useRouter } from 'next/router';
-import { signIn, useSession } from 'next-auth/react';
 import Form from '@/components/atoms/form';
 import Input from '@/components/atoms/input';
 import Button from '@/components/atoms/button';
 import NextLink from '@/components/atoms/link';
+import useResetToast from '@/hooks/useResetToast';
 import Paragraph from '@/components/atoms/paragraph';
+import { signIn, useSession } from 'next-auth/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { LoginSchema, ILogin } from '@/helpers/validation';
 import React, { ReactNode, useEffect, useRef, useState } from 'react';
@@ -56,17 +57,7 @@ const AuthForm = () => {
     }
   };
 
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (status === 'authenticated') {
-      localStorage.setItem('accessToken', session.accessToken);
-    }
-    timeout = setTimeout(() => {
-      setInfoMsg({ msg: '' });
-      setErrorMsg({ msg: '' });
-    }, 1000);
-    return () => clearTimeout(timeout);
-  }, [session?.accessToken, status]);
+  useResetToast({ setInfoMsg, setErrorMsg });
 
   return (
     <div className='w-[37%] min-w-fit'>
