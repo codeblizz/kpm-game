@@ -63,7 +63,7 @@ function Input({
           onClick={() => setShowPassword(!showPassword)}
           className={'absolute top-[20%] cursor-pointer right-[5%]'}
         >
-          {showPassword ? <IconEyeOpen /> : <IconEyeClose />}
+          {showPassword ? <IconEyeClose /> : <IconEyeOpen />}
         </span>
       )}
       {fieldError ? (
