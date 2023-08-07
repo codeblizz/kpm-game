@@ -15,7 +15,7 @@ export function Dropdown({
   const [show, setShow] = useState(false);
 
   return (
-    <Popover className={cn('relative w-24 flex justify-center items-center', className)}>
+    <Popover className={cn('relative z-50 w-24 flex justify-center items-center', className)}>
       <div className='flex w-full justify-center items-center space-x-2'>
         <span>{listItems.flag}</span>
         <span>{listItems.shortName}</span>

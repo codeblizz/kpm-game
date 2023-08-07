@@ -1,20 +1,35 @@
 import { cn } from '@/helpers/lib';
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import Nav from '@/components/atoms/nav';
-import Button from '@/components/atoms/button';
-import { Country } from '@/types/dropdown.type';
+import { signOut, useSession } from 'next-auth/react';
 import CountryList from '@/data/country.json';
+import NextLink from '@/components/atoms/link';
+import { Country } from '@/types/dropdown.type';
 import { Dropdown } from '@/components/atoms/dropdown';
 import IconAddUser from '@/components/assets/icons/userIcon';
+import Button from '@/components/atoms/button';
+import useAuthRedirect from '@/hooks/useAuthRedrect';
 
 function NavBar() {
+  const router = useRouter();
+  const { data: session, status } = useSession();
   const [country, setCountry] = useState<Country>({
     flag: '🇦🇪',
     shortName: 'UAE',
   });
 
+  const logOut = async () => {
+    localStorage.removeItem('accessToken');
+    return await signOut({ callbackUrl: '/login', redirect: true });
+  }
+
+  console.log('status', status)
+
+  // useAuthRedirect(router.route, false);
+
   return (
-    <Nav className='bg-kpm flex space-x-4 items-center justify-end text-sm w-[100%] py-2 px-16 h-14'>
+    <Nav className='bg-kpm sticky z-50 flex space-x-4 items-center justify-end text-sm w-[100%] py-2 px-16 h-14'>
       <Dropdown
         panelClass={''}
         className=''
@@ -27,18 +42,39 @@ function NavBar() {
           })
         )}
       />
-      {['Login', 'Register'].map((btn: string, idx: number) => (
+      {status === 'authenticated' ? (
         <Button
-          key={idx}
+          loader={false}
+          onClick={logOut}
           className={cn(
             'flex items-center justify-between p-2 rounded-md',
-            idx === 1 ? 'text-white bg-black w-24' : 'bg-white text-black'
+            'bg-red-600 text-white'
           )}
         >
-          {idx === 1 && <IconAddUser className='mr-1' />}
-          {btn}
+          {'Logout'}
         </Button>
-      ))}
+      ) : router.pathname === '/login' ? (
+        <NextLink
+          href={'/register'}
+          className={cn(
+            'flex items-center justify-between p-2 rounded-md',
+            'text-white bg-black w-24'
+          )}
+        >
+          {<IconAddUser className='mr-1' />}
+          {'Register'}
+        </NextLink>
+      ) : (
+        <NextLink
+          href={'/login'}
+          className={cn(
+            'flex items-center justify-between p-2 rounded-md',
+            'bg-white text-black'
+          )}
+        >
+          {'Login'}
+        </NextLink>
+      )}
     </Nav>
   );
 }

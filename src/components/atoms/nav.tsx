@@ -1,3 +1,4 @@
+import { cn } from '@/helpers/lib';
 import React, { ReactNode, PropsWithChildren } from 'react';
 
 export type NavType = {
@@ -6,7 +7,7 @@ export type NavType = {
 };
 
 function Nav({ className, children }: PropsWithChildren<NavType>) {
-  return <nav className={className}>{children}</nav>;
+  return <nav className={cn('sticky z-50', className)}>{children}</nav>;
 }
 
 export default Nav;
