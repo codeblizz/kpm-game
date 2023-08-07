@@ -8,6 +8,8 @@ import NextLink from '@/components/atoms/link';
 import IconEdit from '@/components/assets/icons/editIcon';
 import IconCaution from '@/components/assets/icons/caution';
 import IconClose from '@/components/assets/icons/closeIcon';
+import Paragraph from '@/components/atoms/paragraph';
+import { useSession } from 'next-auth/react';
 
 function BetSlipCard({
   href,
@@ -23,6 +25,10 @@ function BetSlipCard({
   okButtonAction,
   cancelButtonAction,
 }: any) {
+
+  const { status } = useSession();
+  const isAuth = status === 'authenticated';
+  
   return (
     <Dialog
       as='div'
@@ -85,8 +91,11 @@ function BetSlipCard({
           </span>}
           <span className='w-96 mt-2 px-3 items-center flex justify-evenly h-10 text-gray-300 bg-neutral-800'>
             <IconCaution className='text-kpm w-4 h-4 float-left' />
-            <span className='text-sm w-auto'>
-              {'To place your bet, Please Sign In or Register'}
+            <span className='flex text-sm w-auto space-x-1'>
+              <Paragraph text='To place your bet, Please' className='' />
+              <NextLink className='underline' href='/login'>Sign in</NextLink> 
+              <span>or</span>
+              <NextLink className='underline' href='/register'>Register</NextLink>
             </span>
           </span>
           <span className='w-96 mt-2 items-center flex justify-between h-10 text-gray-300'>
