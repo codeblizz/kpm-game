@@ -24,13 +24,15 @@ function NavBar() {
     return await signOut({ callbackUrl: '/login', redirect: true });
   }
 
-  console.log('status', status)
-
   // useAuthRedirect(router.route, false);
 
   return (
     <Nav className='bg-kpm sticky z-50 flex space-x-4 items-center justify-end text-sm w-[100%] py-2 px-16 h-14'>
-      <Dropdown
+      <div className='w-full'>
+        <NextLink className='text-xl font-semibold' href='/'>{'Logo'}</NextLink>
+      </div>
+      <div className='flex'>
+        <Dropdown
         panelClass={''}
         className=''
         listItems={country}
@@ -75,6 +77,7 @@ function NavBar() {
           {'Login'}
         </NextLink>
       )}
+      </div>
     </Nav>
   );
 }
