@@ -7,13 +7,14 @@ function useAuthRedirect(
   shouldRedirect: boolean = true
 ) {
   const router = useRouter();
-  const { status } = useSession();
+  const { data: session, status } = useSession();
   const isAuth = status === 'authenticated';
 
   useEffect(() => {
     if (!isAuth) {
-      if (router.route !== '/login') router.push(url);
+      if (router.route !== '/login' && shouldRedirect) router.push('/login');
     } 
+    if (router.route === '/login' && shouldRedirect) router.push(url);
   }, [
     url,
     isAuth,

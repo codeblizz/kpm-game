@@ -1,13 +1,8 @@
 import React, { useEffect } from 'react';
+import { IToast } from '@/types/auth.type';
 import { useSession } from 'next-auth/react';
-import { authMessageType } from '@/types/auth.type';
 
-type ToastType = {
-  setInfoMsg: (v: authMessageType) => void;
-  setErrorMsg: (v: authMessageType) => void;
-};
-
-function useResetToast({ setInfoMsg, setErrorMsg }: ToastType) {
+function useResetToast({ setInfoMsg, setErrorMsg }: IToast) {
   const { data: session, status } = useSession();
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 import Image from '../atoms/image';
 import utils from '@/helpers/utils';
+import { StoreInterface, useAppStore } from '@/store';
 import Card from '@/components/atoms/card';
 import Table from '@/components/atoms/Table';
 import { useSession } from 'next-auth/react';
@@ -11,6 +12,7 @@ import MatchCard from '@/components/molecules/matchCard';
 import HeroImage from '@/components/assets/svgs/hero.svg';
 import BetCard from '@/components/assets/svgs/betCard.svg';
 import BetSlipCard from '@/components/molecules/betSlipCard';
+import { ISlots } from '@/types/slots.type';
 
 type View = {
   name: string;
@@ -18,10 +20,14 @@ type View = {
 };
 
 function HomePage() {
-  const { data: session } = useSession();
   const [betRate, setBetRate] = useState<number>(1);
   const [showSlip, setShowSlip] = useState<boolean>(false);
   const [view, setView] = useState<View>({ name: '', status: false });
+
+  const { slots, matches } = useAppStore((store: StoreInterface) => store);
+
+  const {  } = matches;
+  console.log('appState', matches);
 
   return (
     <Fragment>

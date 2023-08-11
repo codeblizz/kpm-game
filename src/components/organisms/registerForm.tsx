@@ -1,22 +1,19 @@
-import { cn } from '@/helpers/lib';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import Form from '@/components/atoms/form';
 import Input from '@/components/atoms/input';
-import { useSession } from 'next-auth/react';
 import Button from '@/components/atoms/button';
 import NextLink from '@/components/atoms/link';
+import Toast from '@/components/molecules/toast';
 import useResetToast from '@/hooks/useResetToast';
 import Paragraph from '@/components/atoms/paragraph';
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import RegisterService from '@/services/register.service';
-import React, { useEffect, useRef, useState } from 'react';
 import { RegisterSchema, IRegister } from '@/helpers/validation';
 
 const AuthForm = () => {
   const router = useRouter();
-  const { data: session, status } = useSession();
-  const refHasLink = useRef<boolean>(false);
   const [loader, setLoader] = useState(false);
   const [infoMsg, setInfoMsg] = useState({ msg: '' });
   const [errorMsg, setErrorMsg] = useState({ msg: '' });
@@ -24,26 +21,16 @@ const AuthForm = () => {
   const {
     control,
     handleSubmit,
-    reset,
     register,
-    setValue,
     getValues,
-    watch,
-    formState: { errors, isDirty },
+    formState: { errors },
   } = useForm<IRegister>({
     defaultValues,
     resolver: zodResolver(RegisterSchema),
   });
 
-  const onResetField = (id: number) => {
-    if (id === 0) refHasLink.current = true;
-    reset();
-    setLoader(false);
-  };
-
   const onSubmit: SubmitHandler<IRegister> = async (data) => {
     setLoader(true);
-    console.log('data', data)
     const result: any = await RegisterService.registration(data);
     if (result?.data.statusCode === 200) {
       setInfoMsg({ msg: result?.data.message });
@@ -61,14 +48,10 @@ const AuthForm = () => {
         onSubmit={handleSubmit(onSubmit)}
         className='flex flex-col justify-center px-20 py-10 border border-gray-200 items-center bg-gray-50 rounded-2xl w-[100%] h-auto'
       >
-        <span
-          className={cn(
-            infoMsg.msg ? 'bg-green-500' : errorMsg.msg ? 'bg-red-500' : '',
-            'font-semibold mb-5 text-slate-100 px-3 py-2 rounded-lg absolute bottom-[7%] right-[3%]'
-          )}
-        >
-          {infoMsg.msg || errorMsg.msg}
-        </span>
+        <Toast
+          infoMsg={infoMsg}
+          errorMsg={errorMsg}
+        />
         <Paragraph
           text={'Sign Up'}
           className='text-center w-[95%] text-2xl font-bold mb-5'

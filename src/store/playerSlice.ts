@@ -1,25 +1,17 @@
-export type PlayerType = {
-  email: string;
-  username: string;
-  lastName: string;
-  password: string;
-  firstName: string;
-}
-
-export interface IPlayer {
-  players: PlayerType[];
-  createUser: (player: PlayerType) => void;
-  deleteUser: (player: PlayerType) => void;
-}
+import { IPlayer, Player } from '@/types/player.type';
 
 export const PlayerSlice = (set: any, get: any): IPlayer => ({
-  players: [{
-    email: '',
-    username: '',
-    lastName: '',
-    password: '',
-    firstName: '',
-  }],
-  createUser: (player: PlayerType) => set({ players: { ...get().players, player }}),
-  deleteUser: (player: PlayerType) => set({ players: { ...get().players, player }}),
+  players: [
+    {
+      email: '',
+      username: '',
+      lastName: '',
+      password: '',
+      firstName: '',
+    },
+  ],
+  createPlayer: (player: Player) =>
+    set({ players: { ...get().players, player } }),
+  deletePlayer: (player: Player) =>
+    set({ players: { ...get().players, player } }),
 });

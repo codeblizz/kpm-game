@@ -28,7 +28,7 @@ function NavBar() {
   }, []);
 
   return (
-    <Nav className='bg-kpm sticky z-50 flex items-center justify-between text-sm w-[100%] py-2 px-16 h-14'>
+    <Nav className='bg-kpm fixed z-50 flex items-center justify-between text-sm w-[100%] py-2 px-16 h-14'>
       <NextLink className='text-xl font-semibold' href='/'>
         {'Logo'}
       </NextLink>

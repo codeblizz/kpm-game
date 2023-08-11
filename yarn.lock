@@ -757,6 +757,11 @@ default-browser@^4.0.0:
     execa "^7.1.1"
     titleize "^3.0.0"
 
+default-composer@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/default-composer/-/default-composer-0.5.1.tgz#1c204f76bd3882258390bc58d2c5451837b60496"
+  integrity sha512-lEX0EoZZNkdDGL4kvu1SEi3blRkNF81VTx2PdFkQ7jxR+99tJRl6VoEiig91mwXf3xKYuXeBJzVsd7SvTA2c7A==
+
 define-lazy-prop@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/define-lazy-prop/-/define-lazy-prop-3.0.0.tgz#dbb19adfb746d7fc6d734a06b72f4a00d021255f"

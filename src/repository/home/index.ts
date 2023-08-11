@@ -1,16 +1,19 @@
 import { EnumTypes } from '@/enums/type.enums';
+import axiosClient from '@/helpers/axios/client';
 import MainRepository from '@/repository/mainRepository';
-import serverClient from '@/helpers/axios/server';
-
-type Home = {
-  
-}
 
 class HomeRepository extends MainRepository<any> {
   constructor() {
     super(EnumTypes.HOME);
   }
 
+  async getAllSlots() {
+    return await axiosClient.get('/api/slots');
+  }
+
+  async getAllMatches() {
+    return await axiosClient.get('/api/matches');
+  }
 }
 
 export default HomeRepository;

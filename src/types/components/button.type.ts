@@ -1,4 +1,4 @@
-import { authMessageType } from '@/types/auth.type';
+import { AuthMessage } from '@/types/auth.type';
 import React, { ButtonHTMLAttributes } from 'react';
 
 type extraPropsTypes = {

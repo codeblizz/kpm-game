@@ -1,31 +1,28 @@
-type SlotsType = {
-  league: string;
-  teams: string[];
-  odds: {
-    home_team: number;
-    away_team: number;
-    draw: number;
-  };
-};
-
-export interface ISlots {
-  slots: SlotsType[];
-  createSlot: (slot: SlotsType) => void;
-  deleteSlot: (slot: SlotsType) => void;
-}
+import { ISlots, Slots } from '@/types/slots.type';
+import { Collections, Devices } from '@/enums/type.enums';
 
 export const SlotSlice = (set: any, get: any): ISlots => ({
-  slots: [{
-    league: '',
-    teams: ["LA Galaxy", "New York City FC"],
-    odds: {
-      home_team: 0.0,
-      away_team: 0.0,
-      draw: 0.0,
+  slots: [
+    {
+      id: 0,
+      title: '',
+      provider: '',
+      play_url: '',
+      identifier: '',
+      devices: [Devices.DESKTOP],
+      collections: [Collections.HD],
+    },
+  ],
+  getSlots: () => get({ slots: { ...get().slots } }),
+  updateSlots: (slots: Slots[]) => {
+    const slotObj = get().slots;
+    let mergedSlots;
+    for(const key in slotObj) {
+      if(key === 'slots') mergedSlots = [...slots, ...slotObj[key]]
     }
-  }],
-  createSlot: (slot: SlotsType) =>
-    set({ slots: { ...get().slots, slot } }),
-  deleteSlot: (slot: SlotsType) =>
-    set({ slots: { ...get().slots, slot } }),
+    set({ slots: { ...slotObj, ...mergedSlots }});
+  },
+  createSlot: (slot: Slots) => set({ slots: { ...get().slots, ...slot }}),
+  setSlots: (slots: Slots[]) => set({ slots: { ...get().slots, ...slots }}, false, 'setSlots'),
+  deleteSlot: (slot: Slots) => set({ slots: { ...get().slots.filter((s:Slots) => s.id !== slot.id)}}),
 });

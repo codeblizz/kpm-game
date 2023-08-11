@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/baseLayout';
 import RegisterPage from '@/components/organisms/registerForm';
 
 function SignUpPage() {
+
   return (
     <div className='bg-gray-700 fixed w-full min-h-screen flex justify-center items-center'>
       <RegisterPage />
